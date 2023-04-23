@@ -5,7 +5,7 @@ One of my biggest issues is knowing how to organize a project. Coming from more 
 Because of this, I've been focusing on learning how to organize my projects, and one of my favorite architectures so far has been clean architecture. Clean architecture organizes classes and methods based on their level of abstraction. This organization makes development much easier (and cleaner...) but also allows for expandability and evolution as you develop your code.
 
 Clean architecture is layered from most abstract (most self-consistent) to least abstract in the following way:
-![/assets/What is Clean Architecture1.png](https://github.com/kyleeast13/KyleNotes/blob/main/assets/What%20is%20Clean%20Architecture1.png)
+![/assets/What is Clean Architecture1.png](https://github.com/kyleeast13/KyleNotes/blob/main/assets/What%20is%20Clean%20Architecture1.png?raw=true)
 1. Entity (Domain) - This is the base layer, it contains all of the general entities and interfaces that require NO dependencies to any of the other layers.
 2. Use Cases (Application) - This layer only has dependencies on the Entity layer. This layer includes all of the logic that applies manpulating data. This layer does NOT include the logic for accessing either the UI or the database. It only knows how different abstract classes interact with eachother.
 3. Controllers (Interface) - This layer has dependencies on the Application Layer. And manages the interactions between the Application layer and the external dependencies, including external APIs, the UI, and databases/file system. This is generally the RESTful API.
